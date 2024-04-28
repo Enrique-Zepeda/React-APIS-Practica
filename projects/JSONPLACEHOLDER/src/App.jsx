@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -10,6 +11,12 @@ function App() {
               <h1 className="text-3xl font-bold underline text-cyan-300">
                 Hello world!
               </h1>
+              <button className="bg-sky-500 hover:bg-sky-700 px-5 py-5 my-4 text-white rounded-lg">
+                Mi primer boton
+              </button>
+              <Button variant="contained" size="large" color="primary">
+                Contained
+              </Button>
             </div>
           }
         />
