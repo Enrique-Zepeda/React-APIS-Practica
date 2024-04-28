@@ -7,9 +7,12 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import "./index.css";
+import { StyledEngineProvider } from "@mui/material";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider injectFirst>
+      <App />
+    </StyledEngineProvider>
   </React.StrictMode>
 );

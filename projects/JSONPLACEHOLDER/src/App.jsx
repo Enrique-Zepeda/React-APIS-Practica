@@ -14,7 +14,12 @@ function App() {
               <button className="bg-sky-500 hover:bg-sky-700 px-5 py-5 my-4 text-white rounded-lg">
                 Mi primer boton
               </button>
-              <Button variant="contained" size="large" color="primary">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                className="bg-sky-500 hover:bg-sky-700 px-5 py-5 my-4 text-white rounded-lg"
+              >
                 Contained
               </Button>
             </div>
