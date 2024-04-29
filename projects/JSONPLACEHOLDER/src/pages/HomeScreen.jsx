@@ -1,11 +1,13 @@
 import responsePosts from "../mocks/withResponse.json";
+import DrawerMenu from "../components/DrawerMenu";
 export function HomeScreen() {
   const posts = responsePosts;
   const hasPosts = posts.length > 0;
   return (
     <div className="bg-slate-700 h-full flex-col items-center text-center py-8">
       <header>
-        <h1 className="text-4xl text-sky-500">JsonPlaceHolder</h1>
+        <DrawerMenu />
+        <h1 className="text-4xl text-sky-500 mt-3">Posts</h1>
       </header>
       <main className="flex flex-col items-center w-full ">
         {hasPosts ? (
