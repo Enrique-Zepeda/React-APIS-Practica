@@ -16,8 +16,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import PostAddIcon from "@mui/icons-material/PostAdd";
+import CommentIcon from "@mui/icons-material/Comment";
+import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
+import CropOriginalIcon from "@mui/icons-material/CropOriginal";
+import ListIcon from "@mui/icons-material/List";
+import PersonIcon from "@mui/icons-material/Person";
 
 const drawerWidth = 240;
 
@@ -158,7 +162,19 @@ export default function MiniDrawer() {
                       color: theme.palette.primary.main,
                     }}
                   >
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    {text === "Posts" ? (
+                      <PostAddIcon />
+                    ) : text === "Comments" ? (
+                      <CommentIcon />
+                    ) : text === "Albums" ? (
+                      <CollectionsBookmarkIcon />
+                    ) : text === "Photos" ? (
+                      <CropOriginalIcon />
+                    ) : text === "Todo" ? (
+                      <ListIcon />
+                    ) : (
+                      <PersonIcon />
+                    )}
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
