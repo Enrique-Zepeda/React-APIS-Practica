@@ -33,16 +33,29 @@ function App() {
     <>
       <h1>Clima</h1>
       <form onSubmit={searchCiry}>
-        <label>Ingresa una ciudad</label>
-        <input
-          type="text"
-          onChange={(e) => setCity(e.target.value)}
-          value={city}
-        />
-        <button type="submit">Buscar</button>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <label>Ingresa una ciudad</label>
+          <input
+            type="text"
+            onChange={(e) => setCity(e.target.value)}
+            value={city}
+          />
+          <button type="submit">Buscar</button>
+        </div>
       </form>
       <h2>Datos</h2>
-      {data ? <h3>{data.name}</h3> : <p>no hay datos</p>}
+      {data ? (
+        <div>
+          <h3>Ciudad: {data.name}</h3>
+          <p>Temperatura Maxima: {data.main.temp_max}</p>
+          <p>Temperatura Minima: {data.main.temp_min}</p>
+          <p>Temperatura Actual: {data.main.temp}</p>
+          <h4>Clima</h4>
+          <p>{data.weather[0].description}</p>
+        </div>
+      ) : (
+        <p>no hay datos</p>
+      )}
     </>
   );
 }
